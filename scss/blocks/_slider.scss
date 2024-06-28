@@ -1,31 +1,46 @@
 .slider {
     position: relative;
-    padding: 52px 0 66px 0;
+    padding: 52px 5px 66px 5px;
+
+    @include mobile() {
+        padding: 15px 5px;
+    }
 
     &__slide {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 32px;
+
+        @include mobile() {
+            flex-direction: column;
+            gap: 10px;
+        }
     }
     &__title {
         font-weight: 700;
-        font-size: 45px;
+        font-size: clamp(30px, 1.607rem + 1.34vw, 45px);
         line-height: 1;
     }
     &__btn-prev,
     &__btn-next {
         position: absolute;
         z-index: 10;
-
         transform: translateY(-50%);
+
+        width: clamp(0.938rem, 0.491rem + 2.23vw, 2.5rem);
+
+        @include mobile() {
+            display: none;
+            visibility: hidden;
+        }
     }
     &__btn-prev {
         top: 50%;
-        left: 51px;
+        left: clamp(0.625rem, -0.705rem + 4.26vw, 3.125rem);
     }
     &__btn-next {
         top: 50%;
-        right: 51px;
+        right: clamp(0.625rem, -0.705rem + 4.26vw, 3.125rem);
     }
 }

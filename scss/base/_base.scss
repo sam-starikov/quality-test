@@ -2,6 +2,9 @@
 html,
 body {
     font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    line-height: 161%;
+
     color: var(--main-text-color);
     background-color: var(--bg-color);
 }
@@ -26,10 +29,4 @@ a {
     max-width: 1150px;
     padding: 0 15px;
     margin: 0 auto;
-}
-
-.content {
-    &__slider {
-        background-color: #7029cb;
-    }
 }

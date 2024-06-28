@@ -1,0 +1,33 @@
+.flex {
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 20px;
+
+        border-radius: 30px;
+        padding: 25px;
+        background: #d4ff5a;
+
+        @include mobile() {
+            flex-direction: column;
+            align-items: normal;
+        }
+    }
+
+    &__row-item {
+        flex: 1 1 auto;
+        aspect-ratio: 1 / 1;
+
+        border: 2px solid var(--crt-tovar-stroke-color);
+        border-radius: 35px;
+        box-shadow: 2px 5px 10px 0 var(--cart-tovar-bg-color);
+        background: var(--cart-tovar-bg-color);
+
+        @include mobile() {
+            height: 198px;
+            aspect-ratio: auto;
+        }
+    }
+}

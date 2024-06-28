@@ -35,6 +35,10 @@
             display: none;
             visibility: hidden;
         }
+
+        & li:first-child {
+            text-decoration: underline;
+        }
     }
 
     &__burger {

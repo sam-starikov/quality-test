@@ -1,0 +1,46 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto;
+    grid-auto-flow: row;
+
+    gap: 13px;
+
+    counter-reset: counter;
+
+    @include mobile() {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        position: relative;
+        height: 198px;
+        background: var(--ban-color);
+
+        &::after {
+            content: counter(counter);
+            counter-increment: counter;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%);
+
+            font-size: 53px;
+        }
+
+        &:nth-child(1) {
+            grid-column: span 4;
+        }
+        &:nth-child(2) {
+            grid-column: span 8;
+        }
+        &:nth-child(3) {
+            grid-column: span 10;
+        }
+        &:nth-child(4) {
+            grid-column: span 2;
+        }
+    }
+}

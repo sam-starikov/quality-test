@@ -26,17 +26,27 @@
 
                 <nav id="mobile-menu" class="mobile-menu">
                     <ul class="mobile-menu__list">
-                        <li><a href="#!">Link</a></li>
-                        <li><a href="#!">Link</a></li>
-                        <li><a href="#!">Link</a></li>
+                        <li>
+                            <p>Text</p>
+                        </li>
+                        <li>
+                            <p>Text</p>
+                        </li>
+                        <li>
+                            <p>Text</p>
+                        </li>
                     </ul>
                     <button class="mobile-menu__btn btn">Open pop-up</button>
+                    <button class="mobile-menu__btn-close">
+                        <img src="./icons/close-mobile-menu.svg" alt="close menu">
+                    </button>
+
                 </nav>
 
             </div>
         </header>
         <main class="content">
-            <div class="content__slider">
+            <section class="content__slider">
                 <div class="slider">
                     <div class="swiper">
                         <div class="swiper-wrapper">
@@ -67,14 +77,39 @@
                         <img src="./icons/slider-arrow-next.svg" alt="next">
                     </button>
                 </div>
-            </div>
-
-
-            <div class="content__grid"></div>
+            </section>
+            <h2 class="content__title">Hello World!</h2>
+            <section class="grid">
+                <div class="grid__item"></div>
+                <div class="grid__item"></div>
+                <div class="grid__item"></div>
+                <div class="grid__item"></div>
+            </section>
+            <h2 class="content__title">Hello World!</h2>
+            <section class="flex">
+                <div class="container">
+                    <div class="flex__row">
+                        <div class="flex__row-item"></div>
+                        <div class="flex__row-item"></div>
+                        <div class="flex__row-item"></div>
+                        <div class="flex__row-item"></div>
+                        <div class="flex__row-item"></div>
+                    </div>
+                </div>
+            </section>
         </main>
-        <footer class="footer"></footer>
-    </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__row">
+                    <p>Text</p>
+                    <p>Text</p>
+                    <p>Text</p>
+                    <p>Text</p>
 
+                </div>
+            </div>
+        </footer>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
 </body>

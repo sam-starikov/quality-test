@@ -2,23 +2,23 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 20;
 
     display: flex;
     flex-direction: column;
-
     gap: 55px;
-    width: 450px;
 
+    width: 450px;
     padding: clamp(0.938rem, 0.616rem + 1.61vw, 2.063rem) clamp(0.938rem, -0.491rem + 7.14vw, 5.938rem) 35px
         clamp(0.938rem, 0.045rem + 4.46vw, 4.063rem);
 
-    border-radius: 20px;
     background: var(--bg-color);
 
+    transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
 
-    transition: opacity 0.2s ease-in;
+    transition: all 0.2s ease-in;
 
     @include mobile() {
         position: fixed;
@@ -37,6 +37,7 @@
     &--open {
         opacity: 1;
         visibility: visible;
+        transform: translateY(0%);
     }
 
     &__list {
@@ -54,5 +55,12 @@
     }
 
     &__btn {
+        align-self: center;
+    }
+
+    &__btn-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
     }
 }

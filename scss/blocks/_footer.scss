@@ -1,0 +1,18 @@
+.footer {
+    padding: 27.5px 0;
+
+    font-size: 28px;
+    line-height: 1.61;
+    background: #d87ff6;
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(0.938rem, -4.382rem + 17.02vw, 10.938rem);
+
+        @include mobile() {
+            flex-direction: column;
+        }
+    }
+}

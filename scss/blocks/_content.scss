@@ -1,0 +1,16 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: center;
+
+    &__slider {
+        background-color: #7029cb;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 1.5;
+    }
+}
