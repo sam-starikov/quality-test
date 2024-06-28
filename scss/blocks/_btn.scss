@@ -1,0 +1,12 @@
+.btn {
+    padding: 15px 25px;
+    font-size: 24px;
+    border-radius: 25px;
+    background-color: var(--accent-color);
+
+    transition: box-shadow 0.2s ease-in;
+
+    &:hover {
+        box-shadow: 2px 5px 10px 0 var(--cart-tovar-bg-color);
+    }
+}
