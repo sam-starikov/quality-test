@@ -1,0 +1,31 @@
+.slider {
+    position: relative;
+    padding: 52px 0 66px 0;
+
+    &__slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 1;
+    }
+    &__btn-prev,
+    &__btn-next {
+        position: absolute;
+        z-index: 10;
+
+        transform: translateY(-50%);
+    }
+    &__btn-prev {
+        top: 50%;
+        left: 51px;
+    }
+    &__btn-next {
+        top: 50%;
+        right: 51px;
+    }
+}

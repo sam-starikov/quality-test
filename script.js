@@ -8,3 +8,16 @@ burgerBtn.addEventListener('click', function () {
     mobileMenu.classList.toggle('mobile-menu--open')
     this.classList.toggle('header__burger--active')
 })
+/* end */
+
+/* swiper */
+const swiper = new Swiper('.swiper', {
+    direction: 'horizontal',
+    loop: true,
+    // autoplay: true,
+
+    navigation: {
+        nextEl: '.slider__btn-next',
+        prevEl: '.slider__btn-prev',
+    },
+})

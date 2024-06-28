@@ -3,6 +3,7 @@ html,
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--main-text-color);
+    background-color: var(--bg-color);
 }
 
 a {
@@ -14,8 +15,21 @@ a {
     }
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+}
+
 .container {
     max-width: 1150px;
     padding: 0 15px;
     margin: 0 auto;
+}
+
+.content {
+    &__slider {
+        background-color: #7029cb;
+    }
 }

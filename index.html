@@ -4,46 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/main.css">
     <title>Quality test</title>
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <nav class="header__nav">
-                <ul class="header__nav-list">
-                    <li><a href="#!">Link</a></li>
-                    <li><a href="#!">Link</a></li>
-                    <li><a href="#!">Link</a></li>
-                </ul>
-                <button id="burger" class="header__burger">
-                    <span></span>
-                </button>
-            </nav>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li><a href="#!">Link</a></li>
+                        <li><a href="#!">Link</a></li>
+                        <li><a href="#!">Link</a></li>
+                    </ul>
+                    <button id="burger" class="header__burger">
+                        <span></span>
+                    </button>
+                </nav>
 
-            <nav id="mobile-menu" class="mobile-menu">
-                <ul class="mobile-menu__list">
-                    <li><a href="#!">Link</a></li>
-                    <li><a href="#!">Link</a></li>
-                    <li><a href="#!">Link</a></li>
-                </ul>
-                <button class="mobile-menu__btn btn">Open pop-up</button>
-            </nav>
+                <nav id="mobile-menu" class="mobile-menu">
+                    <ul class="mobile-menu__list">
+                        <li><a href="#!">Link</a></li>
+                        <li><a href="#!">Link</a></li>
+                        <li><a href="#!">Link</a></li>
+                    </ul>
+                    <button class="mobile-menu__btn btn">Open pop-up</button>
+                </nav>
 
-        </div>
-    </header>
-    <main class="content">
-        <div class="container">
-            <div class="slider">
-                <h1>TEXT</h1>
-                <button>Open pop-up</button>
             </div>
-            <h2 class="content__title"></h2>
-        </div>
+        </header>
+        <main class="content">
+            <div class="content__slider">
+                <div class="slider">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slider__slide">
+                                    <h1 class="slider__title">Hello World!</h1>
+                                    <button class="btn">Open pop-up</button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slider__slide">
+                                    <h1 class="slider__title">Hello World!</h1>
+                                    <button class="btn">Open pop-up</button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slider__slide">
+                                    <h1 class="slider__title">Hello World!</h1>
+                                    <button class="btn">Open pop-up</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider__btn-prev">
+                        <img src="./icons/slider-arrow-prev.svg" alt="previous">
+                    </button>
+                    <button class="slider__btn-next">
+                        <img src="./icons/slider-arrow-next.svg" alt="next">
+                    </button>
+                </div>
+            </div>
 
-        <div class="content__grid"></div>
-    </main>
+
+            <div class="content__grid"></div>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
 </body>
 
