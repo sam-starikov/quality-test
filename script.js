@@ -21,7 +21,7 @@ const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     loop: true,
     grabCursor: true,
-    autoplay: true,
+    // autoplay: true,
 
     navigation: {
         nextEl: '.slider__btn-next',

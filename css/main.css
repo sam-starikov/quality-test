@@ -131,11 +131,6 @@ body {
 
 a {
   color: currentColor;
-  -webkit-transition: color 0.2s ease-in;
-  transition: color 0.2s ease-in;
-}
-a:hover {
-  color: var(--accent-color);
 }
 
 .wrapper {
@@ -151,11 +146,23 @@ a:hover {
           justify-content: space-between;
   gap: 40px;
 }
+.wrapper__popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40;
+}
 
 .container {
   max-width: 1150px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.none {
+  display: none !important;
 }
 
 /* blocks */
@@ -199,6 +206,7 @@ a:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: clamp(20px, 0.536rem + 3.57vw, 60px);
+  font-weight: 700;
   -webkit-transition: opacity 0.2s ease-in;
   transition: opacity 0.2s ease-in;
 }
@@ -285,6 +293,32 @@ a:hover {
   font-size: 30px;
   line-height: 1.5;
 }
+.content__bottom-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 9px;
+}
+.content__bottom-body p {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.61;
+  color: #f3f3f3;
+}
+.content__bottom-body a {
+  font-size: 24px;
+  font-weight: 400;
+}
 
 .mobile-menu {
   position: absolute;
@@ -351,6 +385,7 @@ a:hover {
 .mobile-menu__btn {
   -ms-flex-item-align: center;
       align-self: center;
+  text-align: center;
 }
 .mobile-menu__btn-close {
   position: absolute;
@@ -370,14 +405,13 @@ a:hover {
   transition: box-shadow 0.2s ease-in;
   transition: box-shadow 0.2s ease-in, -webkit-box-shadow 0.2s ease-in;
 }
-.btn:hover {
+.btn--shadow:hover {
   -webkit-box-shadow: 2px 5px 10px 0 var(--cart-tovar-bg-color);
           box-shadow: 2px 5px 10px 0 var(--cart-tovar-bg-color);
 }
 
 .slider {
   position: relative;
-  padding: 52px 5px 66px 5px;
 }
 @media (max-width: 570px) {
   .slider {
@@ -395,6 +429,7 @@ a:hover {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 32px;
+  padding: 52px 5px 66px;
 }
 @media (max-width: 570px) {
   .slider__slide {
@@ -443,8 +478,8 @@ a:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
-  border-radius: 30px;
   padding: 25px;
+  border-radius: 30px;
   background: #d4ff5a;
 }
 @media (max-width: 570px) {
@@ -506,8 +541,8 @@ a:hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   font-size: 53px;
 }
 .grid__item:nth-child(1) {
@@ -548,4 +583,57 @@ a:hover {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+.popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(83, 83, 83, 0.8078431373);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+.popup__body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  margin: 10px;
+  width: 400px;
+  height: 400px;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1.5;
+  background-color: var(--bg-color);
+}
+@media (max-width: 570px) {
+  .popup__body {
+    height: 300px;
+  }
+}
+.popup__btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }

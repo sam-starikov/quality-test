@@ -1,0 +1,46 @@
+.popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #535353ce;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in;
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__body {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex: 0 1 auto;
+        margin: 10px;
+
+        width: 400px;
+        height: 400px;
+
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 1.5;
+
+        background-color: var(--bg-color);
+
+        @include mobile() {
+            height: 300px;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+}

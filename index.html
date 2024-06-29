@@ -36,9 +36,9 @@
                             <p>Text</p>
                         </li>
                     </ul>
-                    <button class="mobile-menu__btn btn">Open pop-up</button>
+                    <a href="#popup" class="mobile-menu__btn btn">Open pop-up</a>
                     <button class="mobile-menu__btn-close">
-                        <img src="./icons/close-mobile-menu.svg" alt="close menu">
+                        <img src="./icons/close.svg" alt="close menu">
                     </button>
 
                 </nav>
@@ -53,19 +53,19 @@
                             <div class="swiper-slide">
                                 <div class="slider__slide">
                                     <h1 class="slider__title">Hello World!</h1>
-                                    <button class="btn">Open pop-up</button>
+                                    <a href="#popup" class="btn btn--shadow">Open pop-up</a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="slider__slide">
                                     <h1 class="slider__title">Hello World!</h1>
-                                    <button class="btn">Open pop-up</button>
+                                    <a href="#popup" class="btn btn--shadow">Open pop-up</a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="slider__slide">
                                     <h1 class="slider__title">Hello World!</h1>
-                                    <button class="btn">Open pop-up</button>
+                                    <a href="#popup" class="btn btn--shadow">Open pop-up</a>
                                 </div>
                             </div>
                         </div>
@@ -97,6 +97,14 @@
                     </div>
                 </div>
             </section>
+            <section class="content__bottom">
+                <div class="container">
+                    <div class="content__bottom-body">
+                        <p>Text utp</p>
+                        <a href="#popup" class="btn">Open pop-up button</a>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer class="footer">
             <div class="container">
@@ -109,6 +117,16 @@
                 </div>
             </div>
         </footer>
+
+        <div id="popup" class="wrapper__popup popup">
+            <div class="popup__body">
+                Pop-up
+                <a href="#!" class="popup__btn">
+                    <img src="./icons/close.svg" alt="close">
+                </a>
+            </div>
+
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>

@@ -11,11 +11,6 @@ body {
 
 a {
     color: currentColor;
-    transition: color 0.2s ease-in;
-
-    &:hover {
-        color: var(--accent-color);
-    }
 }
 
 .wrapper {
@@ -23,10 +18,23 @@ a {
     flex-direction: column;
     justify-content: space-between;
     gap: 40px;
+
+    &__popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 40;
+    }
 }
 
 .container {
     max-width: 1150px;
     padding: 0 15px;
     margin: 0 auto;
+}
+
+.none {
+    display: none !important;
 }

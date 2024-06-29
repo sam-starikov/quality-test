@@ -3,11 +3,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-
         gap: 20px;
 
-        border-radius: 30px;
         padding: 25px;
+        border-radius: 30px;
         background: #d4ff5a;
 
         @include mobile() {

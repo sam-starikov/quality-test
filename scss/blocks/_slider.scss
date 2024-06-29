@@ -1,6 +1,5 @@
 .slider {
     position: relative;
-    padding: 52px 5px 66px 5px;
 
     @include mobile() {
         padding: 15px 5px;
@@ -11,6 +10,8 @@
         align-items: center;
         justify-content: center;
         gap: 32px;
+
+        padding: 52px 5px 66px;
 
         @include mobile() {
             flex-direction: column;
